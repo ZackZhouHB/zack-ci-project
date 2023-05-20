@@ -88,9 +88,9 @@ pipeline {
                     repository: "${RELEASE_REPO}",
                     credentialsId: "${NEXUS_LOGIN}",
                     artifacts: [
-                        [artifactId: 'zackci',
+                        [artifactId: 'vproapp',
                          classifier: '',
-                         file: 'target/zackci-v2.war',
+                         file: 'target/vprofile-v2.war',
                          type: 'war']
                     ]
                 )
