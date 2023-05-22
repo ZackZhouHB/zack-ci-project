@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
   <servers>
         <server>
-            <id>zackawscode-maven-central-store</id>
+            <id>codeartifact</id>
             <username>aws</username>
             <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
         </server>
@@ -14,7 +14,7 @@
     <id>default</id>
     <repositories>
       <repository>
-        <id>zackawscode-maven-central-store</id>
+        <id>codeartifact</id>
     <url>https://zackawscode-691205101043.d.codeartifact.ap-southeast-2.amazonaws.com/maven/maven-central-store/</url>
       </repository>
     </repositories>
@@ -25,7 +25,7 @@
     </activeProfiles>
 <mirrors>
   <mirror>
-    <id>zackawscode-maven-central-store</id>
+    <id>codeartifact</id>
     <name>zackawscode--maven-central-store</name>
     <url>https://zackawscode-691205101043.d.codeartifact.ap-southeast-2.amazonaws.com/maven/maven-central-store/</url>
     <mirrorOf>*</mirrorOf>
