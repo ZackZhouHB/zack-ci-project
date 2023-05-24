@@ -11,14 +11,14 @@ pipeline {
     }
 
     environment {
-        SNAP_REPO = 'vprofile-snapshot'
+        SNAP_REPO = 'zack2-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = '123'
-        RELEASE_REPO = 'vprofile-release'
-        CENTRAL_REPO = 'vpro-maven-central'
+        RELEASE_REPO = 'zack2-release'
+        CENTRAL_REPO = 'zack2-maven-central'
         NEXUSIP = '172.31.31.156'
         NEXUSPORT = '8081'
-        NEXUS_GRP_REPO = 'vpro-maven-group'
+        NEXUS_GRP_REPO = 'zack2-maven-group'
         NEXUS_LOGIN = 'admin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
