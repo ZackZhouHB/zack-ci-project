@@ -7,8 +7,8 @@ pipeline {
     agent any
 
     environment {
-        cluster = "zack2-cicdjenkins-prd"
-        service = "zack2-cicdjenkins--ecs-service-prd"
+        cluster = "zack2-cicd-jenkins-prod2"
+        service = "zack2-prd-service"
     }
 
     stages {
