@@ -23,10 +23,10 @@ pipeline {
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
         registryCredential = 'ecr:ap-southeast-2:awscreds'
-        appRegistry = '899538497933.dkr.ecr.ap-southeast-2.amazonaws.com/zack2appimg'
+        appRegistry = '899538497933.dkr.ecr.ap-southeast-2.amazonaws.com/zack2appimg2'
         vprofileRegistry = "https://899538497933.dkr.ecr.ap-southeast-2.amazonaws.com/"
-        cluster = "zack2-cicd-jenkins-staging"
-        service = "zack2-app-prod-service"
+        //cluster = "zack2-cicd-jenkins-staging"
+        //service = "zack2-app-prod-service"
     }
 
 
@@ -126,13 +126,13 @@ pipeline {
             }
         }
 
-        stage('Depoly to ECS staging') {
-            steps{
-                withAWS(credentials: 'awscreds', region: 'ap-southeast-2') {
-                    sh 'aws ecs update-service --cluster ${cluster} --service ${service} --force-new-deployment'
-                }
-            }
-        }
+        //stage('Depoly to ECS staging') {
+            //steps{
+                //withAWS(credentials: 'awscreds', region: 'ap-southeast-2') {
+                   // sh 'aws ecs update-service --cluster ${cluster} --service ${service} --force-new-deployment'
+              //  }
+          //  }
+       // }
     }
 
     post {
