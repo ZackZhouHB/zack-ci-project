@@ -16,7 +16,7 @@ pipeline {
         NEXUS_PASS = '123'
         RELEASE_REPO = 'zack2-release'
         CENTRAL_REPO = 'zack2-maven-central'
-        NEXUSIP = '172.31.31.156'
+        NEXUSIP = '172.31.21.172'
         NEXUSPORT = '8081'
         NEXUS_GRP_REPO = 'zack2-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
