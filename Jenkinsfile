@@ -24,8 +24,8 @@ pipeline {
         SONARSCANNER = 'sonarscanner'
         ARTIFACT_NAME = "vprofile-v${BUILD_ID}.war"
         AWS_S3_BUCKET = 'zack2-cicd-bean'
-        AWS_EB_APP_NAME = 'zack2-cicdhybrid-bean'
-        AWS_EB_ENVIRONMENT = 'Zack2-cicdhybrid-bean-env'
+        AWS_EB_APP_NAME = 'zack2-cicdhy-bean'
+        AWS_EB_ENVIRONMENT = 'zack2-cicdhy-bean-env'
         AWS_EB_APP_VERSION ="${BUILD_ID}"
     }
 
