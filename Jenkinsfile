@@ -27,7 +27,7 @@ pipeline {
         SONARSCANNER = 'sonarscanner'
         ARTIFACT_NAME = "vprofile-v${buildNumber}.war"
         AWS_S3_BUCKET = 'zack2-cicd-bean'
-        AWS_EB_APP_NAME = 'zack2-cicdhy-bean'
+        AWS_EB_APP_NAME = 'zack2-cicd-bean-prod'
         AWS_EB_ENVIRONMENT = 'Zack2-cicd-bean-prod-env'
         AWS_EB_APP_VERSION ="${buildNumber}"
     }
@@ -35,7 +35,7 @@ pipeline {
 
 
     stages {
-        stage('Deploy to Bean Stage') {
+        stage('Deploy to Bean Prod') {
           steps {          
             withAWS(credentials: 'awsbeancreds', region: 'ap-southeast-2') {
               sh 'aws elasticbeanstalk update-environment --application-name $AWS_EB_APP_NAME --environment-name $AWS_EB_ENVIRONMENT --version-label $AWS_EB_APP_VERSION'
