@@ -22,7 +22,7 @@ pipeline {
                             ),
                             string(
                                 defaultValue: '',
-                                name: 'BUILD',
+                                name: 'TIME',
                             )
                         ])
                     ])
