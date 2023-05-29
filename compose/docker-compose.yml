@@ -32,7 +32,7 @@ services:
   vproweb:
     image: vprofile/vprofileweb:v1
     ports:
-      - "80:80"
+      - "8089:80"
 volumes:
   vprodbdata: {}
   vproappdata: {}
