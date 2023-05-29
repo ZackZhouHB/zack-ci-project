@@ -13,7 +13,7 @@ pipeline {
     environment {
         SNAP_REPO = 'zack2-snapshot'
         NEXUS_USER = 'admin'
-        NEXUS_PASS = '123'
+        NEXUS_PASS = credentials('nexuspass')
         RELEASE_REPO = 'zack2-release'
         CENTRAL_REPO = 'zack2-maven-central'
         NEXUSIP = '172.31.21.172'
@@ -22,7 +22,6 @@ pipeline {
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
-        NEXUS_PASS = credentials('nexuspass')
     }
 
 
