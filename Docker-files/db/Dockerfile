@@ -1,6 +1,6 @@
 FROM mysql:5.7.25
-LABEL "Project"="Vprofile"
-LABEL "Author"="Imran"
+LABEL "Project"="zackdockerp"
+LABEL "Author"="zack"
 
 ENV MYSQL_ROOT_PASSWORD="vprodbpass"
 ENV MYSQL_DATABASE="accounts"
