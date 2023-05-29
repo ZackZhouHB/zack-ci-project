@@ -1,5 +1,4 @@
-//fetch the id from stage stage pipeline
-def laststagebuildNumber = Jenkins.instance.getItem('zack2-cicdbean-stage').lastSuccessfulBuild.number
+def buildNumber = Jenkins.instance.getItem('zack2-cicdbean-stage').lastSuccessfulBuild.number
 
 
 def COLOR_MAP = [
@@ -26,11 +25,11 @@ pipeline {
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
-        ARTIFACT_NAME = "vprofile-v${laststagebuildNumber}.war"
+        ARTIFACT_NAME = "vprofile-v${buildNumber}.war"
         AWS_S3_BUCKET = 'zack2-cicd-bean'
         AWS_EB_APP_NAME = 'zack2-cicd-bean-prod'
         AWS_EB_ENVIRONMENT = 'Zack2-cicd-bean-prod-env'
-        AWS_EB_APP_VERSION ="${laststagebuildNumber}"
+        AWS_EB_APP_VERSION ="${buildNumber}"
     }
 
 
