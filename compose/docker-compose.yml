@@ -8,11 +8,13 @@ services:
       - vprodbdata:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=vprodbpass
+    restart: always
 
   vprocache01:
     image: memcached
     ports:
       - "11211:11211"
+    restart: always
 
   vpromq01:
     image: rabbitmq
@@ -21,6 +23,7 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=guest
       - RABBITMQ_DEFAULT_PASS=guest
+    restart: always
 
   vproapp:
     image: vprofile/vprofileapp:v1
@@ -28,13 +31,15 @@ services:
       - "8080:8080"
     volumes: 
       - vproappdata:/usr/local/tomcat/webapps
+    restart: always
 
   vproweb:
     image: vprofile/vprofileweb:v1
     ports:
       - "80:80"
+    restart: always
+
 volumes:
   vprodbdata: {}
   vproappdata: {}
-  
-restart: always
+
