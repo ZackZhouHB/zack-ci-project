@@ -16,8 +16,8 @@ spec:
     spec:      # specification for pod #
       containers:
       - name: vprodb
-        image: vprofile/vprofiledb:V1
-        imagePullPolicy: IfNotPresent
+        image: vprofile/vprofiledb
+        #imagePullPolicy: IfNotPresent
         args:
           - "--ignore-db-dir=lost+found"
         volumeMounts:
