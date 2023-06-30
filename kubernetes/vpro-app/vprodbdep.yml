@@ -18,16 +18,16 @@ spec:
       - name: vprodb
         image: vprofile/vprofiledb
         imagePullPolicy: IfNotPresent
-        #args:
-        # - "--ignore-db-dir=lost+found"
+        args:
+          - "--ignore-db-dir=lost+found"
         volumeMounts:
-        - mountPath: /var/lib/mysql
+          - mountPath: /var/lib/mysql
           name: vpro-db-data
         ports:
-        - name: vprodb-port
+          - name: vprodb-port
           containerPort: 3306
         env:               # fetch dbname and pass from env var app-secret.yml file #
-         - name: MYSQL_ROOT_PASSWORD
+          - name: MYSQL_ROOT_PASSWORD
            valueFrom:
              secretKeyRef:
                name: app-secret
