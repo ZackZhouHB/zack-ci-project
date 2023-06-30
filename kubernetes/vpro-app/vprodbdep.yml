@@ -8,12 +8,12 @@ spec:
   selector:
     matchLabels:
       app: vprodb
-  replicas: 1
+  replicas: 1   # 1 = we just need 1 DB #
   template:
     metadata:
       labels:
         app: vprodb
-    spec:
+    spec:      # specification for pod #
       containers:
       - name: vprodb
         image: vprofile/vprofiledb:V1
@@ -25,18 +25,18 @@ spec:
         ports:
         - name: vprodb-port
           containerPort: 3306
-        env:
+        env:               # fetch dbname and pass from env var app-secret.yml file #
          - name: MYSQL_ROOT_PASSWORD
            valueFrom:
              secretKeyRef:
                name: app-secret
                key: db-pass
-      nodeSelector:
-        zone: us-east-2b
+      nodeSelector:         # DB running same zone with the volume created before #
+        zone: ap-southeast-2a
       volumes:
         - name: vpro-db-data
-          # This AWS EBS volume must already exist.
+          # This AWS EBS volume must already exist and running same zone with db #
           awsElasticBlockStore:
-             volumeID: vol-0cf3d659eba6861d4
+             volumeID: vol-0e2de0d7b82364cd0
              fsType: ext4
 
