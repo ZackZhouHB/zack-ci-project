@@ -16,7 +16,7 @@ spec:
     spec:      # specification for pod #
       containers:
       - name: vprodb
-        image: vprofile/vprofiledb:V1
+        image: vprofile/vprofiledb:v1
         args:
          - "--ignore-db-dir=lost+found"
         volumeMounts:
