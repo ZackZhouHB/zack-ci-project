@@ -17,6 +17,7 @@ spec:
       containers:
       - name: vprodb
         image: vprofile/vprofiledb:v1
+        imagePullPolicy: IfNotPresent
         args:
          - "--ignore-db-dir=lost+found"
         volumeMounts:
